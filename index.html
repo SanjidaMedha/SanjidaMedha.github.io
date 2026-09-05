@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000000;
+      color: #999999;
+      font-family: 'Poppins', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 { color: #ffffff; }
+    .text-primary-custom { color: #ffbd39 !important; }
+    .bg-primary-custom { background-color: #ffbd39 !important; }
+    
+    /* Navigation */
+    .navbar { background: #000; border-bottom: 1px solid #222; }
+    .navbar-brand, .nav-link { color: #fff !important; font-weight: 600; }
+    .nav-link:hover { color: #ffbd39 !important; }
+
+    /* Hero Section */
+    .hero { min-height: 90vh; display: flex; align-items: center; text-align: center; }
+    .hero h1 { font-size: 3.5rem; font-weight: 800; }
+    .hero span { color: #ffbd39; }
+
+    /* Buttons */
+    .btn-custom {
+      background: #ffbd39; color: #000; font-weight: 700;
+      border-radius: 30px; padding: 12px 30px; border: none;
+    }
+    .btn-custom:hover { background: #e0a328; color: #000; }
+    
+    /* Skills */
+    .progress { height: 10px; background-color: #222; margin-bottom: 25px; }
+    .progress-bar { background-color: #ffbd39; }
+
+    /* Experience Card */
+    .resume-box {
+      background: #1a1a1a; padding: 30px; border-radius: 5px;
+      border-left: 4px solid #ffbd39; margin-bottom: 20px;
+    }
+
+    /* Project Cards */
+    .project-card {
+      background: #111; border: 1px solid #222; border-radius: 8px;
+      overflow: hidden; transition: transform 0.3s ease;
+    }
+    .project-card:hover { transform: translateY(-5px); border-color: #ffbd39; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">PORTFOLIO</a>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#about">Skills</a>
+        <a class="nav-link" href="#resume">Resume</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero container">
+    <div class="mx-auto">
+      <p class="text-primary-custom fw-bold tracking-wide">HELLO!</p>
+      <h1>I'm <span>Sanjida Aktter Medha</span></h1>
+      <h3 class="mb-4 text-white-50">Django & Python Developer</h3>
+      <a href="#projects" class="btn btn-custom">MY WORKS</a>
+    </div>
+  </section>
+
+
+
+  <!-- Centered Portrait Image Container -->
+<div class="d-flex justify-content-center my-4">
+  <img 
+    src="image\myProfile.jpeg" 
+    alt="Profile Picture" 
+    style="width: 100%; max-width: 400px; height: 520px; object-fit: cover; border-radius: 8px; border: 1px solid #222;"
+  >
+</div>
+
+      
+ <!-- About & Skills Section -->
+<section id="about" class="py-5 container">
+  <div class="row">
+    <div class="col-md-6 mb-4">
+  <h2 class="fw-bold mb-4">About Me</h2>
+  <p>
+    I am a dedicated Artificial Intelligence and full-stack web Developer with a strong focus on backend system architecture and application development. I specialize in building data-driven applications using Python and Django, with hands-on experience developing complex selling systems, school management platforms, dynamic RESTful APIs, and machine learning models. Combining deep technical expertise with clean code practices, I aim to create secure, scalable digital solutions while continually expanding my backend engineering capabilities.
+  </p>
+  
+  <div class="mt-4 text-white">
+    <div class="row mb-2">
+      <div class="col-4 text-warning fw-bold" style="color: #ffbd39 !important;">Profile:</div>
+      <div class="col-8">Full-Stack & Django Developer</div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-4 text-warning fw-bold" style="color: #ffbd39 !important;">Specialization:</div>
+      <div class="col-8">Web Systems, Relational Databases & APIs</div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-4 text-warning fw-bold" style="color: #ffbd39 !important;">Language:</div>
+      <div class="col-8">English, Bangla, Urdu, Hindi</div>
+    </div>
+  </div>
+</div>
+
+    <!-- Skills Column -->
+    <div class="col-md-6">
+      <h2 class="fw-bold mb-4">Skills</h2>
+      <div>
+        <!-- Backend & Core Technologies -->
+        <h5 class="text-warning mt-3 mb-2" style="font-size: 1rem; color: #ffbd39 !important;">Backend & Core Technologies</h5>
+        
+        <div class="d-flex justify-content-between text-white mb-1">
+          <span>Python</span>
+          <span>90%</span>
+        </div>
+        <div class="progress mb-2"><div class="progress-bar bg-warning" style="width: 90%; background-color: #ffbd39 !important;"></div></div>
+
+        <div class="d-flex justify-content-between text-white mb-1">
+          <span>Django & Django REST Framework</span>
+          <span>85%</span>
+        </div>
+        <div class="progress mb-2"><div class="progress-bar bg-warning" style="width: 85%; background-color: #ffbd39 !important;"></div></div>
+
+        <div class="d-flex justify-content-between text-white mb-1">
+          <span>REST APIs</span>
+          <span>85%</span>
+        </div>
+        <div class="progress mb-3"><div class="progress-bar bg-warning" style="width: 85%; background-color: #ffbd39 !important;"></div></div>
+
+        <!-- Database & Tools -->
+        <h5 class="text-warning mt-4 mb-2" style="font-size: 1rem; color: #ffbd39 !important;">Database & Tools</h5>
+        
+        <div class="d-flex justify-content-between text-white mb-1">
+          <span>PostgreSQL & SQLite</span>
+          <span>80%</span>
+        </div>
+        <div class="progress mb-2"><div class="progress-bar bg-warning" style="width: 80%; background-color: #ffbd39 !important;"></div></div>
+
+        <div class="d-flex justify-content-between text-white mb-1">
+          <span>Git / GitHub</span>
+          <span>85%</span>
+        </div>
+        <div class="progress mb-3"><div class="progress-bar bg-warning" style="width: 85%; background-color: #ffbd39 !important;"></div></div>
+
+        <!-- Frontend Integration -->
+        <h5 class="text-warning mt-4 mb-2" style="font-size: 1rem; color: #ffbd39 !important;">Frontend Integration</h5>
+        
+        <div class="d-flex justify-content-between text-white mb-1">
+          <span>HTML5 / CSS3</span>
+          <span>85%</span>
+        </div>
+        <div class="progress mb-2"><div class="progress-bar bg-warning" style="width: 85%; background-color: #ffbd39 !important;"></div></div>
+
+        <div class="d-flex justify-content-between text-white mb-1">
+          <span>JavaScript</span>
+          <span>75%</span>
+        </div>
+        <div class="progress mb-2"><div class="progress-bar bg-warning" style="width: 75%; background-color: #ffbd39 !important;"></div></div>
+
+        <div class="d-flex justify-content-between text-white mb-1">
+          <span>Bootstrap</span>
+          <span>80%</span>
+        </div>
+        <div class="progress mb-3"><div class="progress-bar bg-warning" style="width: 80%; background-color: #ffbd39 !important;"></div></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+<!-- Resume / Experience Section -->
+<section id="resume" class="py-5 container">
+  <h2 class="fw-bold mb-5 text-center text-white">Resume</h2>
+
+  <!-- AI & Machine Learning Research -->
+  <div class="resume-box p-4 mb-4" style="background: #1a1a1a; border-left: 4px solid #ffbd39; border-radius: 5px;">
+    <span class="fw-bold" style="color: #ffbd39;">AI & Deep Learning Research</span>
+    <h3 class="text-white mt-2 mb-1">Machine Learning Engineer / Researcher</h3>
+    <p class="text-white-50 mb-4">Computer Vision, Natural Language Processing & Neural Networks</p>
+
+    <!-- Project 1 -->
+    <div class="mb-4">
+      <h5 class="h6 mb-2" style="color: #ffbd39 !important;">Dual-CNN Region-Level Feature Fusion for Image Captioning Using Transformer Decoder</h5>
+      <ul class="text-white-50 small ps-3 mb-0" style="line-height: 1.6;">
+        <li>Architected a heterogeneous Dual-CNN encoder combining ResNet-50 and EfficientNet-B4 backbones to extract region-level visual feature maps without pre-computed object detectors.</li>
+        <li>Projected feature maps into a 512-dimensional shared embedding space and decoded visual tokens using a 3-layer, 8-head Transformer Decoder with Beam Search (size 5).</li>
+        <li>Evaluated model on Flickr8k dataset, achieving BLEU-1 score of 0.6319 and CIDEr score of 0.5484 while optimizing cross-entropy loss and modeling pipeline components in LaTeX[cite: 1].</li>
+      </ul>
+    </div>
+
+    <!-- Project 2 -->
+    <div>
+      <h5 class="h6 mb-2" style="color: #ffbd39 !important;">Deep Learning Vision & Sequence Modeling Pipeline</h5>
+      <ul class="text-white-50 small ps-3 mb-0" style="line-height: 1.6;">
+        <li>Engineered PyTorch sequence modeling and tokenization pipelines for end-to-end multimodal alignment across image-text pairs[cite: 1].</li>
+        <li>Optimized sequence training loops, attention mechanisms, and custom data loaders in Kaggle and Google Colab cloud GPU runtimes[cite: 1].</li>
+        <li>Formulated loss functions and math architectures in LaTeX for publication-ready technical reports[cite: 1].</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Software Development Role -->
+  <div class="resume-box p-4 mb-4" style="background: #1a1a1a; border-left: 4px solid #ffbd39; border-radius: 5px;">
+    <span class="fw-bold" style="color: #ffbd39;">2023 - Present</span>
+    <h3 class="text-white mt-2 mb-1">Software Developer</h3>
+    <p class="text-white-50 mb-4">Full-Stack Web Engineering & System Architecture</p>
+
+    <div class="mb-4">
+      <h5 class="h6 mb-2" style="color: #ffbd39 !important;">E-Commerce & Digital Advertising Platform</h5>
+      <ul class="text-white-50 small ps-3 mb-0" style="line-height: 1.6;">
+        <li>Engineered a full-stack Django dynamic platform featuring sponsored product banners, cart workflows, and checkout sessions.</li>
+        <li>Handled database transactions to ensure accurate stock management and seamless customer interactions.</li>
+      </ul>
+    </div>
+
+    <div class="mb-4">
+      <h5 class="h6 mb-2" style="color: #ffbd39 !important;">Food Court Directory & Promotional System</h5>
+      <ul class="text-white-50 small ps-3 mb-0" style="line-height: 1.6;">
+        <li>Developed an interactive web platform for vendors displaying stall layouts, digital menus, pricing tiers, and contact channels.</li>
+        <li>Implemented customer rating systems to increase visibility for stall owners and enhance overall engagement.</li>
+      </ul>
+    </div>
+
+    <div class="mb-4">
+      <h5 class="h6 mb-2" style="color: #ffbd39 !important;">School Management System</h5>
+      <ul class="text-white-50 small ps-3 mb-0" style="line-height: 1.6;">
+        <li>Architected role-based Django dashboards for administrators, teachers, and students to record attendance, grades, and academic tracking.</li>
+        <li>Designed SQLite/PostgreSQL relational schemas in Visual Studio to eliminate redundancy and maintain high-efficiency relational mapping.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h5 class="h6 mb-2" style="color: #ffbd39 !important;">Pharmacy Management & Inventory System</h5>
+      <ul class="text-white-50 small ps-3 mb-0" style="line-height: 1.6;">
+        <li>Built inventory point-of-sale software featuring automated batch tracking, stock updates, and expiration alerts.</li>
+        <li>Automated dynamic billing calculations, PDF invoice outputs, and complete transaction log handling.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="py-5 container" style="max-width: 900px; margin: auto;">
+  <h2 class="text-center text-white mb-5" style="font-size: 2.5rem; font-weight: bold;">Education</h2>
+
+  <!-- Degree 1 -->
+  <div class="education-card p-4 mb-4" style="background: #1a1a1a; border-radius: 8px; border: 1px solid #222;">
+    <span class="fw-bold fs-5" style="color: #ffbd39; display: block; margin-bottom: 8px;">2021 – 2025</span>
+    <h3 class="text-white h4 mb-2" style="font-weight: 600;">Bachelor of Science in Computer Science & Engineering</h3>
+    <p class="text-uppercase mb-3" style="color: #aaa; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 500;">
+      Bangladesh University of Business and Technology (BUBT)
+    </p>
+    
+  </div>
+
+  <!-- Degree 2 -->
+  <div class="education-card p-4 mb-4" style="background: #1a1a1a; border-radius: 8px; border: 1px solid #222;">
+    <span class="fw-bold fs-5" style="color: #ffbd39; display: block; margin-bottom: 8px;">2017 – 2019</span>
+    <h3 class="text-white h4 mb-2" style="font-weight: 600;">Higher Secondary Certificate (HSC)</h3>
+    <p class="text-uppercase mb-3" style="color: #aaa; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 500;">
+      Chowmuhani Government S.A. College, Noakhali 
+    </p>
+    
+  </div>
+</section>
+
+
+<!-- Projects Section Container -->
+<section id="projects" class="container py-5" style="max-width: 800px; margin: auto;">
+  <h2 class="text-center text-white mb-4 fw-bold">Projects</h2>
+
+  <!-- Card 1: Selling System -->
+  <div class="project-card mb-4" style="background: #121212; border: 1px solid #ffbd39; border-radius: 8px; padding: 18px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+    
+    <!-- Bigger Video Player Section -->
+    <div style="flex: 1.5; min-width: 260px;">
+      <video 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        controls 
+        style="width: 100%; height: auto; border-radius: 6px; object-fit: cover; border: 1px solid #333;"
+      >
+        <source src="vedio\mysell_show.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Project Details Section -->
+    <div style="flex: 1; color: #fff; min-width: 240px;">
+      <h3 style="color: #ffbd39; font-size: 1.35rem; font-weight: bold; margin-bottom: 6px;">
+        Selling System E-Commerce Platform
+      </h3>
+      
+      <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 12px;">
+        Python • Django • PostgreSQL • JavaScript
+      </p>
+
+      <ul style="color: #888; font-size: 0.82rem; line-height: 1.5; padding-left: 16px; margin-bottom: 16px;">
+        <li>Full-stack e-commerce system with dynamic product filtering and inventory management.</li>
+        <li>Role-based access control for customers and admin inventory managers.</li>
+        <li>Integrated shopping cart and automated order generation workflow.</li>
+      </ul>
+
+      <a href="https://github.com/SanjidaMedha" style="background: #ffbd39; color: #000; font-weight: bold; font-size: 0.85rem; padding: 8px 18px; border-radius: 20px; text-decoration: none; display: inline-block;">
+        GitHub Repo
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Card 2: Food Court -->
+  <div class="project-card mb-4" style="background: #121212; border: 1px solid #ffbd39; border-radius: 8px; padding: 18px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+    
+    <!-- Bigger Video Player Section -->
+    <div style="flex: 1.5; min-width: 260px;">
+      <video 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        controls 
+        style="width: 100%; height: auto; border-radius: 6px; object-fit: cover; border: 1px solid #333;"
+      >
+        <source src="vedio\foodcourt.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Project Details Section -->
+    <div style="flex: 1; color: #fff; min-width: 240px;">
+      <h3 style="color: #ffbd39; font-size: 1.35rem; font-weight: bold; margin-bottom: 6px;">
+        Food Court Directory & Promotional Platform
+      </h3>
+      
+      <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 12px;">
+        Python • Django • HTML5/CSS3 • PostgreSQL
+      </p>
+
+      <ul style="color: #888; font-size: 0.82rem; line-height: 1.5; padding-left: 16px; margin-bottom: 16px;">
+        <li>Developed an interactive web directory for vendors displaying stall layouts, digital menus, and pricing tiers.</li>
+        <li>Integrated customer feedback and rating modules to boost vendor visibility.</li>
+        <li>Structured backend models to manage stall availability and promotional ad banners.</li>
+      </ul>
+
+      <a href="https://github.com/SanjidaMedha/food-courts--Django" style="background: #ffbd39; color: #000; font-weight: bold; font-size: 0.85rem; padding: 8px 18px; border-radius: 20px; text-decoration: none; display: inline-block;">
+        GitHub Repo
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Card 3: School Management System -->
+<div class="project-card mb-4" style="background: #121212; border: 1px solid #ffbd39; border-radius: 8px; padding: 18px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+  
+  <!-- Video / Image Preview Section -->
+  <div style="flex: 1.5; min-width: 260px;">
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline 
+      controls 
+      style="width: 100%; height: auto; border-radius: 6px; object-fit: cover; border: 1px solid #333;"
+    >
+      <source src="vedio\school_management_system.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Project Details Section -->
+  <div style="flex: 1; color: #fff; min-width: 240px;">
+    <h3 style="color: #ffbd39; font-size: 1.35rem; font-weight: bold; margin-bottom: 6px;">
+      School Management System
+    </h3>
+    
+    <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 12px;">
+      Python • Django • SQLite / PostgreSQL • Visual Studio
+    </p>
+
+    <ul style="color: #888; font-size: 0.82rem; line-height: 1.5; padding-left: 16px; margin-bottom: 16px;">
+      <li>Architected role-based Django dashboards for admins, teachers, and students to track attendance, grades, and records.</li>
+      <li>Designed optimized relational database schemas in Visual Studio to ensure zero data redundancy and fast querying.</li>
+      <li>Implemented secure session management, course enrollment workflows, and academic report generation.</li>
+    </ul>
+
+    <a href="https://github.com/SanjidaMedha" style="background: #ffbd39; color: #000; font-weight: bold; font-size: 0.85rem; padding: 8px 18px; border-radius: 20px; text-decoration: none; display: inline-block;">
+      GitHub Repo
+    </a>
+  </div>
+
+</div>
+
+
+</section>
+
+
+<!-- FontAwesome CDN for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<section id="contact" style="background-color: #000000; color: #ffffff; padding: 80px 20px; text-align: center; font-family: 'Poppins', sans-serif;">
+  
+  <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; text-transform: uppercase;">Contact Me</h2>
+  <p style="color: #999999; margin-bottom: 50px; font-size: 0.95rem;">Below are the details to reach out to me!</p>
+
+  <!-- Circular Contact Icons Grid -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 35px; max-width: 500px; margin: 0 auto 40px auto;">
+    
+    <!-- Address -->
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="background-color: #1a1a1a; color: #ffbd39; width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; margin-bottom: 15px;">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <h3 style="font-size: 0.8rem; letter-spacing: 2px; color: #999999; margin-bottom: 6px; text-transform: uppercase;">ADDRESS</h3>
+      <p style="color: #ffffff; font-size: 1rem; margin: 0;">Mirpur-2, Dhaka</p>
+    </div>
+
+    <!-- Phone Number -->
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="background-color: #1a1a1a; color: #ffbd39; width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; margin-bottom: 15px;">
+        <i class="fas fa-phone-alt"></i>
+      </div>
+      <h3 style="font-size: 0.8rem; letter-spacing: 2px; color: #999999; margin-bottom: 6px; text-transform: uppercase;">CONTACT NUMBER</h3>
+      <p style="margin: 0;"><a href="tel:+88801727148808" style="color: #ffffff; font-size: 1rem; text-decoration: none;">+888 01727148808</a></p>
+    </div>
+
+    <!-- Email -->
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="background-color: #1a1a1a; color: #ffbd39; width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; margin-bottom: 15px;">
+        <i class="fas fa-paper-plane"></i>
+      </div>
+      <h3 style="font-size: 0.8rem; letter-spacing: 2px; color: #999999; margin-bottom: 6px; text-transform: uppercase;">EMAIL ADDRESS</h3>
+      <p style="margin: 0;"><a href="mailto:sanjida.medhabubt@gmail.com" style="color: #ffffff; font-size: 1rem; text-decoration: none;">sanjida.medhabubt@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- Download Resume Link -->
+  <div style="margin-bottom: 50px;">
+    <h3 style="font-size: 0.85rem; letter-spacing: 2px; color: #999999; margin-bottom: 12px; text-transform: uppercase;">DOWNLOAD RESUME</h3>
+    <a href="resume.pdf" download style="color: #ffffff; text-decoration: underline; font-size: 1rem;">Resume</a>
+  </div>
+
+  <!-- Big Question Button -->
+  <div style="margin-bottom: 40px;">
+    <h2 style="font-size: 1.8rem; margin-bottom: 20px; font-weight: 600;">Have a Question?</h2>
+    <a href="mailto:sanjida.medhabubt@gmail.com" style="display: inline-block; background-color: #ffbd39; color: #000000; font-weight: 700; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-size: 0.9rem; letter-spacing: 1px;">CLICK HERE</a>
+  </div>
+
+  <!-- Social Icons -->
+  <div style="display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 20px;">
+    <span style="color: #999999; font-size: 0.9rem;">Find me on</span>
+    <a href="https://www.linkedin.com/in/sanjida-medha-7847b7349" target="_blank" style="background-color: #1a1a1a; color: #ffbd39; width: 38px; height: 38px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none;">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1d42Cw7MPR/" target="_blank" style="background-color: #1a1a1a; color: #ffbd39; width: 38px; height: 38px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none;">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </div>
+
+</section>
+
+
+
+</body>
+</html>
