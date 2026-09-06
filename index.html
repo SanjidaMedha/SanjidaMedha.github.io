@@ -49,6 +49,53 @@
       overflow: hidden; transition: transform 0.3s ease;
     }
     .project-card:hover { transform: translateY(-5px); border-color: #ffbd39; }
+/* Fix Navbar Spacing for Desktop */
+.navbar {
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  border-bottom: 1px solid #222;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Pushes PORTFOLIO to left, menu links to right */
+  align-items: center;
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 35px; /* Adds space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffbd39;
+}
   </style>
   <!-- Open Graph / Social Media Preview Meta Tags -->
 <meta property="og:title" content="Portfolio - Django & Full-Stack Developer">
@@ -59,19 +106,28 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">PORTFOLIO</a>
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#about">Skills</a>
-        <a class="nav-link" href="#resume">Resume</a>
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <!-- FontAwesome for Hamburger Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="nav-logo">PORTFOLIO</a>
+    
+    <!-- 3-Line Hamburger Icon -->
+    <button class="nav-toggle" id="navToggle" aria-label="toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation Menu Items -->
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#about">Skills</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
   <!-- Hero Section -->
   <section class="hero container">
@@ -480,7 +536,22 @@
 
 </section>
 
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
 
+  // Toggle mobile menu open/close
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // Close menu automatically when clicking any section link
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
 
 </body>
 </html>
