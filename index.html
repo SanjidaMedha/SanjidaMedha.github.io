@@ -96,6 +96,44 @@
 .nav-menu a:hover {
   color: #ffbd39;
 }
+
+
+/* Mobile Responsiveness & Hamburger Toggle Fix */
+    .nav-toggle {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      display: none; /* Desktop-e button hide thakbe */
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none; /* Mobile-e by default menu hidden thakbe */
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        padding: 25px 20px;
+        text-align: center;
+        border-bottom: 1px solid #222;
+        gap: 20px !important;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      }
+      
+      /* JavaScript diye 'active' class add hole menu show korbe */
+      .nav-menu.active {
+        display: flex !important;
+      }
+
+      /* Mobile-e hamburger toggle button show korbe */
+      .nav-toggle {
+        display: block !important;
+      }
+    }    
   </style>
   <!-- Open Graph / Social Media Preview Meta Tags -->
 <meta property="og:title" content="Portfolio - Django & Full-Stack Developer">
@@ -540,7 +578,7 @@
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
 
-  // Toggle mobile menu open/close
+  // Toggle mobile menu open/close smoothly
   navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
   });
